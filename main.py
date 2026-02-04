@@ -12,11 +12,8 @@ import json
 app = FastAPI(title="Agentic Honey-Pot API")
 
 # Your Groq API Key
-
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-
-YOUR_API_KEY = os.environ.get("YOUR_API_KEY", "your-secret-api-key-123")
-
+YOUR_API_KEY = os.environ.get("YOUR_API_KEY")
 
 # Initialize Groq client
 groq_client = Groq(api_key=GROQ_API_KEY)
