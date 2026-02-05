@@ -52,95 +52,9 @@ An AI-powered honeypot system that detects scam messages, engages scammers auton
 - FastAPI
 - Docker (for containerization)
 
-##  Local Setup
 
-1. **Clone/Create the project**
-```bash
-mkdir honeypot-api
-cd honeypot-api
-```
 
-2. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-3. **Set up environment variables**
-```bash
-# Copy the example env file
-cp .env.example .env
-
-# Edit .env with your keys
-nano .env
-```
-
-4. **Run the application**
-```bash
-python main.py
-```
-
-The API will be available at `http://localhost:8000`
-
-##  Docker Deployment
-
-1. **Build the Docker image**
-```bash
-docker build -t honeypot-api .
-```
-
-2. **Run the container**
-```bash
-docker run -p 8000:8000 \
-  -e GROQ_API_KEY=your_groq_key \
-  -e YOUR_API_KEY=your_secret_key \
-  honeypot-api
-```
-
-##  Railway Deployment
-
-1. **Install Railway CLI**
-```bash
-npm i -g @railway/cli
-```
-
-2. **Login to Railway**
-```bash
-railway login
-```
-
-3. **Initialize project**
-```bash
-railway init
-```
-
-4. **Set environment variables**
-```bash
-railway variables set GROQ_API_KEY=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
-railway variables set YOUR_API_KEY=your-secret-api-key-123
-```
-
-5. **Deploy**
-```bash
-railway up
-```
-
-6. **Get your public URL**
-```bash
-railway domain
-```
-
-### Alternative: Deploy via Railway Dashboard
-
-1. Go to [railway.app](https://railway.app)
-2. Click "New Project" → "Deploy from GitHub repo"
-3. Connect your GitHub repository
-4. Add environment variables:
-   - `GROQ_API_KEY`: Your Groq API key
-   - `YOUR_API_KEY`: Your authentication key
-5. Railway will auto-deploy from Dockerfile
-6. Copy your public domain URL
-
-## 📡 API Usage
+## API Usage
 
 ### Endpoint: POST /api/message
 
@@ -207,7 +121,7 @@ Content-Type: application/json
 
 ##  Testing
 
-Test your API with curl:
+Testing the API with curl:
 
 ```bash
 curl -X POST https://your-railway-url.up.railway.app/api/message \
