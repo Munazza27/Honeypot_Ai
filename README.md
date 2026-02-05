@@ -193,8 +193,3 @@ honeypot-api/
 
 
 
-For issues or questions about the competition, contact GUVI support.
-
-## 📄 License
-
-This project is for hackathon use only.
