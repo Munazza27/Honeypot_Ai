@@ -2,7 +2,7 @@
 
 An AI-powered honeypot system that detects scam messages, engages scammers autonomously, and extracts intelligence.
 
-## 🎯 Features
+##  Features
 
 - **Scam Detection**: Automatically detects fraudulent messages using keyword analysis and pattern matching
 - **AI Agent**: Uses Groq's Llama model to engage scammers in human-like conversations
@@ -10,7 +10,7 @@ An AI-powered honeypot system that detects scam messages, engages scammers auton
 - **Multi-turn Conversations**: Maintains context across conversation sessions
 - **Automated Reporting**: Sends final results to GUVI evaluation endpoint
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────┐
@@ -45,14 +45,14 @@ An AI-powered honeypot system that detects scam messages, engages scammers auton
 └─────────────────────────────┘
 ```
 
-## 📋 Requirements
+##  Requirements
 
 - Python 3.11+
 - Groq API Key
 - FastAPI
 - Docker (for containerization)
 
-## 🚀 Local Setup
+##  Local Setup
 
 1. **Clone/Create the project**
 ```bash
@@ -81,7 +81,7 @@ python main.py
 
 The API will be available at `http://localhost:8000`
 
-## 🐳 Docker Deployment
+##  Docker Deployment
 
 1. **Build the Docker image**
 ```bash
@@ -96,7 +96,7 @@ docker run -p 8000:8000 \
   honeypot-api
 ```
 
-## 🚂 Railway Deployment
+##  Railway Deployment
 
 1. **Install Railway CLI**
 ```bash
@@ -205,7 +205,7 @@ Content-Type: application/json
 }
 ```
 
-## 🧪 Testing
+##  Testing
 
 Test your API with curl:
 
@@ -229,7 +229,7 @@ curl -X POST https://your-railway-url.up.railway.app/api/message \
   }'
 ```
 
-## 🎯 How It Works
+##  How It Works
 
 1. **Scam Detection**: Analyzes incoming messages for scam patterns
 2. **Agent Activation**: If scam detected, AI agent takes over
@@ -242,22 +242,22 @@ curl -X POST https://your-railway-url.up.railway.app/api/message \
    - Suspicious keywords
 5. **Final Report**: After 8-12 messages, sends final intelligence to GUVI endpoint
 
-## 🔒 Security
+##  Security
 
 - API key authentication required
 - No storage of sensitive user data
 - Ethical engagement only
 - No impersonation of real individuals
 
-## 📊 Evaluation Criteria
+##  Evaluation Criteria
 
-- ✅ Scam detection accuracy
-- ✅ Quality of AI engagement
-- ✅ Intelligence extraction effectiveness
-- ✅ API stability and response time
-- ✅ Ethical behavior
+- Scam detection accuracy
+- Quality of AI engagement
+- Intelligence extraction effectiveness
+- API stability and response time
+- Ethical behavior
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **FastAPI**: Web framework
 - **Groq**: AI model inference (Llama 3.3 70B)
@@ -265,7 +265,7 @@ curl -X POST https://your-railway-url.up.railway.app/api/message \
 - **Docker**: Containerization
 - **Railway**: Deployment platform
 
-## 📝 Project Structure
+## Project Structure
 
 ```
 honeypot-api/
@@ -277,20 +277,7 @@ honeypot-api/
 └── test_api.py         # Test script
 ```
 
-## 🐛 Troubleshooting
 
-**Issue: API key error**
-- Make sure `x-api-key` header matches `YOUR_API_KEY` in environment
-
-**Issue: Groq API errors**
-- Verify your Groq API key is valid
-- Check API rate limits
-
-**Issue: Railway deployment fails**
-- Ensure all environment variables are set
-- Check Railway logs: `railway logs`
-
-## 📞 Support
 
 For issues or questions about the competition, contact GUVI support.
 
